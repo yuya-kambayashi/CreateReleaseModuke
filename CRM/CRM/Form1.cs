@@ -16,5 +16,15 @@ namespace CRM
         {
             InitializeComponent();
         }
+
+        private void buttonSelectOldModule_Click(object sender, EventArgs e)
+        {
+            var ret = folderBrowserDialog1.ShowDialog();
+
+            if (ret == DialogResult.OK)
+            {
+                textBoxOldModule.Text =  folderBrowserDialog1.SelectedPath;
+            }
+        }
     }
 }
