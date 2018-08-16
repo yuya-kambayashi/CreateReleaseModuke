@@ -19,12 +19,24 @@ namespace CRM
 
         private void buttonSelectOldModule_Click(object sender, EventArgs e)
         {
+            SelectOldModulePath();
+        }
+
+        private void SelectOldModulePath()
+        {
+            folderBrowserDialog1.Description = "コピー元のRUNフォルダを指定してください。";
             var ret = folderBrowserDialog1.ShowDialog();
 
             if (ret == DialogResult.OK)
             {
-                textBoxOldModule.Text =  folderBrowserDialog1.SelectedPath;
+                textBoxOldModule.Text = folderBrowserDialog1.SelectedPath;
             }
+        }
+
+        private void FormCRM_Load(object sender, EventArgs e)
+        {
+            SelectOldModulePath();
+
         }
     }
 }

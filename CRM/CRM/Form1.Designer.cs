@@ -32,6 +32,7 @@
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.buttonSelectOldModule = new System.Windows.Forms.Button();
             this.textBoxOldModule = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -44,32 +45,43 @@
             // 
             // buttonSelectOldModule
             // 
-            this.buttonSelectOldModule.Location = new System.Drawing.Point(12, 24);
+            this.buttonSelectOldModule.Location = new System.Drawing.Point(342, 44);
             this.buttonSelectOldModule.Name = "buttonSelectOldModule";
-            this.buttonSelectOldModule.Size = new System.Drawing.Size(326, 23);
+            this.buttonSelectOldModule.Size = new System.Drawing.Size(48, 28);
             this.buttonSelectOldModule.TabIndex = 1;
-            this.buttonSelectOldModule.Text = "コピー元モジュール選択";
+            this.buttonSelectOldModule.Text = "編集";
             this.buttonSelectOldModule.UseVisualStyleBackColor = true;
             this.buttonSelectOldModule.Click += new System.EventHandler(this.buttonSelectOldModule_Click);
             // 
             // textBoxOldModule
             // 
-            this.textBoxOldModule.Location = new System.Drawing.Point(14, 56);
+            this.textBoxOldModule.Location = new System.Drawing.Point(12, 44);
             this.textBoxOldModule.Multiline = true;
             this.textBoxOldModule.Name = "textBoxOldModule";
-            this.textBoxOldModule.Size = new System.Drawing.Size(324, 109);
+            this.textBoxOldModule.Size = new System.Drawing.Size(324, 29);
             this.textBoxOldModule.TabIndex = 2;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(12, 18);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(91, 12);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "コピー元モジュール";
             // 
             // FormCRM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(395, 450);
+            this.ClientSize = new System.Drawing.Size(539, 450);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.textBoxOldModule);
             this.Controls.Add(this.buttonSelectOldModule);
             this.Controls.Add(this.label1);
             this.Name = "FormCRM";
             this.Text = "リリースモジュール作成ツール";
+            this.Load += new System.EventHandler(this.FormCRM_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -81,6 +93,7 @@
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
         private System.Windows.Forms.Button buttonSelectOldModule;
         private System.Windows.Forms.TextBox textBoxOldModule;
+        private System.Windows.Forms.Label label2;
     }
 }
 
